@@ -1,0 +1,8 @@
+builders:
+  methods_builder:
+    import: "package:dart_js_interop_gen/builder.dart"
+    builder_factories: ["jsMethodsGen"]
+    build_extensions: { ".dart": [".methods.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
